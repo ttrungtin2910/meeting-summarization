@@ -1,0 +1,24 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [],
+    "ignoreWords": [
+        "autoflush",
+        "backref",
+        "cmetadata",
+        "dotenv",
+        "dtos",
+        "embedder",
+        "ivfflat",
+        "onupdate",
+        "persistance",
+        "pgvector",
+        "readall",
+        "sessionmaker",
+        "setinputsizes",
+        "vectordb"
+    ],
+    "import": []
+}

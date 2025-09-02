@@ -1,0 +1,3 @@
+"""Initializes the package and aggregates public imports"""
+
+from .factory import get_language_model

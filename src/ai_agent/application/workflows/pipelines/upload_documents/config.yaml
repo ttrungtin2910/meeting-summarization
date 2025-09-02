@@ -1,0 +1,10 @@
+modules:
+  - class: LoadDocuments
+
+  - class: SplitDocuments
+    init_args:
+      splitter: splitter
+
+  - class: AddChunks
+    init_args:
+      vector_storage: vector_storage

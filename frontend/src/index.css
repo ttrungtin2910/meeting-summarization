@@ -1,0 +1,203 @@
+/* Global styles for Meeting Summary App */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #e8f5e8 0%, #f0f8ff 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Government-style color palette */
+.gov-primary {
+  color: #1f5f8b;
+}
+
+.gov-primary-bg {
+  background-color: #1f5f8b;
+}
+
+.gov-secondary {
+  color: #28a745;
+}
+
+.gov-secondary-bg {
+  background-color: #28a745;
+}
+
+.gov-light {
+  color: #6c757d;
+}
+
+.gov-light-bg {
+  background-color: #f8f9fa;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Custom card styles */
+.gov-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s ease;
+}
+
+.gov-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Upload area custom styles */
+.upload-area {
+  border: 2px dashed #d9d9d9;
+  border-radius: 12px;
+  background: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  border-color: #1f5f8b;
+  background: #f0f8ff;
+}
+
+.upload-area.dragging {
+  border-color: #28a745;
+  background: #f0fff0;
+  transform: scale(1.02);
+}
+
+/* Progress bar styles */
+.progress-container {
+  background: #f5f5f5;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #1f5f8b 0%, #28a745 100%);
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+/* Result section styles */
+.result-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 16px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #1f5f8b;
+}
+
+.result-section h3 {
+  color: #1f5f8b;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Badge styles */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.processing {
+  background: #cce5ff;
+  color: #0066cc;
+}
+
+.status-badge.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.failed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .gov-card {
+    margin: 8px;
+    border-radius: 8px;
+  }
+  
+  .result-section {
+    padding: 16px;
+    margin: 8px 0;
+  }
+}
